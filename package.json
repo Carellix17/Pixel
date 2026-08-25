@@ -1,0 +1,20 @@
+{
+  "name": "pixel",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pixel — personal AI assistant (monorepo)",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "mobile": "npm run start --workspace=@pixel/mobile",
+    "mobile:web": "npm run web --workspace=@pixel/mobile",
+    "api": "npm run dev --workspace=@pixel/api",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
